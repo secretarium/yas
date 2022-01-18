@@ -43,9 +43,9 @@
 #include <yas/json_oarchive.hpp>
 #include <yas/json_iarchive.hpp>
 #include <yas/mem_streams.hpp>
-#include <yas/file_streams.hpp>
-#include <yas/std_streams.hpp>
-#include <yas/count_streams.hpp>
+//#include <yas/file_streams.hpp>
+//#include <yas/std_streams.hpp>
+//#include <yas/count_streams.hpp>
 
 namespace yas {
 
@@ -205,7 +205,7 @@ save(yas::vector_ostream<Byte>&& os, Types &&... args) {
     oa(std::forward<Types>(args)...);
 }
 
-/***************************************************************************/
+/***************************************************************************
 // file name
 
 template<std::size_t F, typename ...Types>
@@ -238,7 +238,7 @@ save(const char *fname, Types &&... args) {
     oa(std::forward<Types>(args)...);
 }
 
-/***************************************************************************/
+***************************************************************************
 // yas::file_ostream
 
 template<std::size_t F, typename ...Types>
@@ -268,7 +268,7 @@ save(yas::file_ostream &os, Types &&... args) {
     oa(std::forward<Types>(args)...);
 }
 
-/***************************************************************************/
+***************************************************************************
 // yas::std_ostream_adapter
 
 template<std::size_t F, typename ...Types>
@@ -298,7 +298,7 @@ save(yas::std_ostream_adapter &os, Types &&... args) {
     oa(std::forward<Types>(args)...);
 }
 
-/***************************************************************************/
+***************************************************************************/
 // byte counter
 
 template<std::size_t F, typename ...Types>
@@ -370,7 +370,7 @@ load(const Buf &buf, Types &&... args) {
     ia(std::forward<Types>(args)...);
 }
 
-/***************************************************************************/
+/***************************************************************************
 // file name
 
 template<std::size_t F, typename ...Types>
@@ -403,7 +403,7 @@ load(const char *fname, Types &&... args) {
     ia(std::forward<Types>(args)...);
 }
 
-/***************************************************************************/
+***************************************************************************
 // yas::file_istream
 
 template<std::size_t F, typename ...Types>
@@ -433,7 +433,7 @@ load(yas::file_istream &is, Types &&... args) {
     ia(std::forward<Types>(args)...);
 }
 
-/***************************************************************************/
+***************************************************************************
 // yas::std_istream_adapter
 
 template<std::size_t F, typename ...Types>
@@ -463,7 +463,7 @@ load(yas::std_istream_adapter &is, Types &&... args) {
     ia(std::forward<Types>(args)...);
 }
 
-/***************************************************************************/
+***************************************************************************/
 
 } // namespace yas
 
