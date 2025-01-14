@@ -41,10 +41,14 @@
 #include <yas/types/std/pair.hpp>
 #include <yas/types/std/bitset.hpp>
 //#include <yas/types/std/chrono.hpp>
-#include <yas/types/std/optional.hpp>
+#if !defined(_MSC_VER) || !defined(_IN_ENCLAVE)
+// #include <yas/types/std/optional.hpp>
+#endif
 //#include <yas/types/std/complex.hpp>
 #include <yas/types/std/string.hpp>
+#if !defined(_MSC_VER) || !defined(_IN_ENCLAVE)
 #include <yas/types/std/string_view.hpp>
+#endif
 #include <yas/types/std/u16string.hpp>
 #include <yas/types/std/wstring.hpp>
 #include <yas/types/std/vector.hpp>
@@ -57,7 +61,9 @@
 #include <yas/types/std/multiset.hpp>
 #include <yas/types/std/array.hpp>
 #include <yas/types/std/tuple.hpp>
+#if !defined(_MSC_VER) || !defined(_IN_ENCLAVE)
 #include <yas/types/std/variant.hpp>
+#endif
 #include <yas/types/std/unordered_set.hpp>
 #include <yas/types/std/unordered_map.hpp>
 #include <yas/types/std/unordered_multiset.hpp>
