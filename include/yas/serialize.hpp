@@ -45,7 +45,7 @@
 #include <yas/mem_streams.hpp>
 //#include <yas/file_streams.hpp>
 //#include <yas/std_streams.hpp>
-//#include <yas/count_streams.hpp>
+#include <yas/count_streams.hpp>
 
 namespace yas {
 
